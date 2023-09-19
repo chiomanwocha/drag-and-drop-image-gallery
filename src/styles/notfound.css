@@ -1,0 +1,24 @@
+.container-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-wrapper p {
+  font-size: 36px;
+}
+
+.container-wrapper .redirect {
+  font-size: 24px;
+  cursor: pointer;
+  color: rgb(188, 42, 42);
+}
+
+.container-wrapper .redirect:hover {
+  border-bottom: 1px solid rgb(188, 42, 42);
+}

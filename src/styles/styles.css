@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Poppins:wght@400;600;700;800&display=swap");
+
+* {
+  font-family: "DM Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.login-left {
+  width: 90%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.login-left h1 {
+  letter-spacing: 2px;
+  cursor: default;
+}
+
+.login-left > form {
+  padding: 20px;
+  border: 1px solid rgb(160, 160, 160);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 18px;
+}
+
+.login-left > form > div {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.login-left > form > div label {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.login-left > form > div > div {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid rgb(160, 160, 160);
+  padding: 5px;
+  margin-top: 2px;
+}
+
+.login-left > form > div > div input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  width: 100%;
+}
+.login-left > form > div > div img {
+  cursor: pointer;
+}
+.login-left > form > button {
+  background-color: white;
+  border: 1px solid rgb(160, 160, 160);
+  outline: none;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-left > form > button:hover {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.login-left > form > p {
+  font-size: 14px;
+  text-align: center;
+  background-color: transparent;
+  color: white;
+}
+
+.login-left > form > p > span {
+  cursor: pointer;
+  color: rgb(188, 42, 42);
+}
+
+.login-left > form > p > span:hover {
+  border-bottom: 1px solid rgb(188, 42, 42);
+}
+
+.login-right {
+  width: 10%;
+  background-color: rgb(48, 48, 48);
+}
