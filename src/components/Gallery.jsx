@@ -20,9 +20,9 @@ const Gallery = () => {
     <div className="gallery-wrapper">
       <div className="gallery-header">
         <p>HNGx</p>
-        <div>
+        <div className="user-section">
           <p>Hello, there! &#x1F44B;</p>
-          <button onClick={handleLogout}>logout</button>
+          <button onClick={handleLogout}>Logout</button>
         </div>
       </div>
       <div className="gallery-subheader">

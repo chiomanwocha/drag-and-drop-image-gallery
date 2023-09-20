@@ -29,6 +29,15 @@
   font-size: 34px;
 }
 
+.user-section p {
+  font-size: 18px;
+}
+
+.user-section button{
+  font-size: 16px;
+  color: black;
+}
+
 .gallery-header button {
   background-color: white;
   border: 1px solid rgb(160, 160, 160);
@@ -70,6 +79,8 @@
   font-weight: 500;
   border-radius: 4px;
   margin: 0 5px 10px 0;
+  cursor: default;
+  user-select: none;
 }
 
 .container {

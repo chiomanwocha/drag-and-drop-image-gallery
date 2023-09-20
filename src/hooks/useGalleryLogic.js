@@ -14,7 +14,7 @@ const useGalleryLogic = () => {
 
   useEffect(() => {
     const searchResult = galleryDetails.filter((item) =>
-      item.tag.includes(searchKey)
+      item.tag.includes(searchKey.toLowerCase())
     );
     setItems({ boxes: searchResult });
 
