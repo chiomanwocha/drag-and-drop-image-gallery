@@ -33,7 +33,7 @@
   font-size: 18px;
 }
 
-.user-section button{
+.user-section button {
   font-size: 16px;
   color: black;
 }
@@ -50,9 +50,10 @@
   background-color: hsl(0, 0%, 90%);
 }
 
-.grid-item:hover {
+.grid-hover:hover {
   transition: filter 0.2s ease;
   filter: drop-shadow(0px 0px 5px white);
+  cursor: grab;
 }
 
 .grid-item-content {
@@ -93,11 +94,8 @@
 
 .dropzone {
   flex: 1;
-  min-height: 90vh;
+  height: 100dvh;
   overflow-y: hidden;
-  border: 1px dashed rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
-  display: inline-block;
   position: relative;
 }
 
@@ -106,7 +104,6 @@
   height: 100%;
   box-sizing: border-box;
   padding: 0.5em;
-  cursor: grab;
 }
 
 .grid-item-content {
@@ -150,7 +147,7 @@
 }
 
 .gallery-subheader > .gallery-search {
-  border: 1px solid rgb(169, 169, 169);
+  border: 1px solid #333333;
   width: 40%;
   padding: 11px 15px;
   border-radius: 25px;
@@ -165,6 +162,12 @@
   outline: none;
   border: none;
   font-size: 16px;
+}
+
+.gallery-subheader > .gallery-search:focus-within {
+  border: 1px solid #949494;
+  transition: 0.5s ease;
+  box-shadow: 0px 0px 5px #333333;
 }
 
 .empty-state {

@@ -9,8 +9,8 @@ const Login = () => {
     showPassword,
     validateUser,
     setUserDetails,
+    continueAsGuest,
     setShowPassword,
-    loginWithRedirect,
   } = useLoginLogic();
 
   return (
@@ -53,11 +53,11 @@ const Login = () => {
               </div>
             </div>
           ))}
-          <button type="submit">Log in</button>
-          <p>
-            Don't have an account yet,{" "}
-            <span onClick={() => loginWithRedirect()}>register</span>
-          </p>
+          <div className="authenticate">
+            <button type="submit">Log in</button>
+            <p>or</p>
+            <button onClick={continueAsGuest}>Continue as guest</button>
+          </div>
         </form>
       </div>
       <div className="login-right"></div>

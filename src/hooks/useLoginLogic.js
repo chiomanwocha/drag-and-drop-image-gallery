@@ -21,6 +21,7 @@ const useLoginLogic = () => {
     ) {
       toast.success("Login successfully");
       localStorage.setItem("protected", true);
+      localStorage.setItem("user-type", "user");
       navigate("/image-gallery");
     } else if (
       userDetails.email === "user@example.com" &&
@@ -30,6 +31,13 @@ const useLoginLogic = () => {
     } else {
       toast.error("User with this email doesn't exist");
     }
+  };
+
+  const continueAsGuest = () => {
+    toast.success("Login successfully");
+    localStorage.setItem("protected", true);
+    localStorage.setItem("user-type", "guest");
+    navigate("/image-gallery");
   };
 
   useEffect(() => {
@@ -46,6 +54,7 @@ const useLoginLogic = () => {
     validateUser,
     setUserDetails,
     setShowPassword,
+    continueAsGuest,
     loginWithRedirect,
   };
 };

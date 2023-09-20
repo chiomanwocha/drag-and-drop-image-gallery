@@ -4,11 +4,14 @@ import { useMediaQuery } from "react-responsive";
 import { useAuth0 } from "@auth0/auth0-react";
 import { toast } from "react-toastify";
 import galleryDetails from "../mock";
+import { useNavigate } from "react-router-dom";
 
 const useGalleryLogic = () => {
-  const { isLoading, logout } = useAuth0();
+  const { isLoading } = useAuth0();
   const [displayLoader, setDisplayLoader] = useState(true);
   const [searchKey, setSearchKey] = useState("");
+
+  const storedUserType = localStorage.getItem("user-type");
 
   const [items, setItems] = useState({ boxes: galleryDetails });
 
@@ -22,7 +25,7 @@ const useGalleryLogic = () => {
       setDisplayLoader(false);
     }, 1500);
     return () => clearTimeout(timeoutId);
-  }, [searchKey]);
+  }, [searchKey, storedUserType]);
 
   function onChange(sourceId, sourceIndex, targetIndex, targetId) {
     if (targetId) {
@@ -59,19 +62,28 @@ const useGalleryLogic = () => {
     boxesPerRow = 4;
   }
 
+  const navigate = useNavigate();
+
   const handleLogout = () => {
-    logout();
+    navigate('/')
     toast.success("Logout succesfully");
+    localStorage.removeItem("user-type");
     localStorage.removeItem("protected");
   };
-  
+
+  const onGuestDrag = () => {
+    toast.info("Login to drag and drop");
+  };
+
   return {
     items,
+    userType: storedUserType,
     isLoading,
     searchKey,
     boxesPerRow,
     displayLoader,
     onChange,
+    onGuestDrag,
     setSearchKey,
     handleLogout,
   };
