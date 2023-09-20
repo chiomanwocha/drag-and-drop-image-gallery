@@ -34,6 +34,7 @@ const Login = () => {
                   type={`${showPassword ? "text" : item.label}`}
                   required
                   id={item.label}
+                  minLength={item.label === 'password' ? 6 : null}
                   placeholder={item.placeholder}
                   value={userDetails[item.label]}
                   onChange={(e) =>
